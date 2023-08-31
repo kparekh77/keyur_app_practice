@@ -1,4 +1,4 @@
-# frontend/Dockerfile
+# user_service/Dockerfile
 FROM python:3.8-slim
 
 WORKDIR /app
@@ -8,4 +8,4 @@ RUN pip install -r requirements.txt
 
 COPY . .
 
-CMD ["python", "app.py"]
+CMD ["python", "main.py"]
