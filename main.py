@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, jsonify
 import requests
 from note_service.note_service import NoteService
 from user_service.user_service import UserService
+
 app = Flask(__name__)
 
 note_service = NoteService()
@@ -29,3 +30,5 @@ def register():
 def login():
     return user_service.login(request.form.get('username'), request.form.get('password'))
 
+if __name__ == '__main__':
+    app.run()
