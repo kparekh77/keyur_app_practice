@@ -1,23 +1,28 @@
 version: '3'
 
 services:
-  user_service:
+  main_service:
     build:
-      context: ./user_service
+      context: .
     ports:
       - "5001:5001"
+  # user_service:
+  #   build:
+  #     context: ./user_service
+  #   ports:
+  #     - "5001:5001"
       
-  note_service:
-    build:
-      context: ./note_service
-    ports:
-      - "5002:5002"
+  # note_service:
+  #   build:
+  #     context: ./note_service
+  #   ports:
+  #     - "5002:5002"
       
-  frontend:
-    build:
-      context: ./frontend
-    ports:
-      - "5000:5000"
-    depends_on:
-      - user_service
-      - note_service
+  # frontend:
+  #   build:
+  #     context: ./frontend
+  #   ports:
+  #     - "5000:5000"
+  #   depends_on:
+  #     - user_service
+  #     - note_service
